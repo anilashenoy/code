@@ -1,0 +1,25 @@
+Fitbit_Plus= 7980
+IPods = 22349
+MI_Band = 999
+Cult_Pass = 2799
+Macbook_Pro = 229900
+Digital_Camera = 11101
+Alexa = 9999
+Sandwich_Toaster = 2195
+Microwave_Oven = 9800
+Scale = 4999
+lst = [Fitbit_Plus, IPods, MI_Band, Cult_Pass, Macbook_Pro, Digital_Camera, Alexa, Sandwich_Toaster, Microwave_Oven, Scale]
+lst.sort()
+print(lst)
+array = []
+num = int(input())
+for i in range(0, len(lst)):
+    for j in range(i+num-1, len(lst)):
+        min = abs(lst[i] - lst[j])
+        if len(array) == 0:
+            array.append(min)
+        elif min < array[0]:
+            array[0] = min
+            i_val = lst[i]
+            j_val = lst[j]
+print(i_val, j_val, array)
